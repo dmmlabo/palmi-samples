@@ -1,0 +1,10 @@
+デンシャチエン	デンシャチエン
+
+SpcLibcurlSamplePalmiUKBEdit0400000402
+パルミー、デンシャチエン＊言って	パルミー、デンシャチエン＊教えて	パルミー、デンシャチエン＊○って	パルミー、デンシャチエン＊□って
+[デンシャチエンですね。#NAME#]	/A=SapieContainer/ SpcLibcurlSample
+
+キーワードによる聞き返し
+デンシャチエン
+[デンシャチエン？]ひょっとして|どなた・か|ぼくに|、デンシャチエン/をするよう、言いました？	/A=VoiceRecogApp/ ASKAGAIN_5 デンシャチエン パルミー、デンシャチエン＊言って /A=SapieContainer/ SpcLibcurlSample
+
