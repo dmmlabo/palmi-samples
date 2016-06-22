@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <SchemaVersion>2.0</SchemaVersion>
     <ProjType>PalmiSPC</ProjType>
-    <ProjectGuid>e7048b67-3f66-4384-bfe0-038236f51e26</ProjectGuid>
+    <ProjectGuid>{e7048b67-3f66-4384-bfe0-038236f51e26}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <OutputTypeEx>Exe</OutputTypeEx>
     <RootNamespace>MyRootNamespace</RootNamespace>
@@ -15,14 +15,15 @@
     </IncludePath>
     <CompileDef>
     </CompileDef>
-    <LinkFlags>
-    </LinkFlags>
+    <LinkFlags>-Wl,--no-as-needed -Wl,-rpath-link /usr/arm-linux-gnueabi/lib/arm-linux-gnueabi</LinkFlags>
     <LinkPath>
     </LinkPath>
-    <LinkAddLib>
-    </LinkAddLib>
+    <LinkAddLib>/usr/arm-linux-gnueabi/lib/arm-linux-gnueabi/libcurl.so.4.2.0</LinkAddLib>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
     <Name>SpcLibcurlSample</Name>
+    <PackagePath>.\SpcLibcurlSample.zip</PackagePath>
+    <PackageAppName>SpcLibcurlSample</PackageAppName>
+    <ShowRecMotNotes>0</ShowRecMotNotes>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -41,7 +42,49 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="curl" />
     <Folder Include="seeddata" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="tinycurl.cpp">
+      <SubType>Content</SubType>
+    </Compile>
+    <Content Include="curl\curl.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="curl\curlbuild.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="curl\curlrules.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="curl\curlver.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="curl\easy.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="curl\mprintf.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="curl\multi.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="curl\stdcheaders.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="curl\typecheck-gcc.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="picojson.h">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="tinycurl.h">
+      <SubType>Content</SubType>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -1,4 +1,4 @@
-﻿class SpcLibcurlSample : spc::SPCBase
+﻿class spc_libcurl_sample : spc::SPCBase
 {
 
 public:
