@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjType>PalmiSPC</ProjType>
+    <ProjectGuid>1f7d0908-26fc-4f26-aad8-ae402030b181</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <OutputTypeEx>Exe</OutputTypeEx>
+    <RootNamespace>MyRootNamespace</RootNamespace>
+    <AssemblyName>MyAssemblyName</AssemblyName>
+    <SpcUserName>spc_compiler</SpcUserName>
+    <SpcUserPass>spcuser1</SpcUserPass>
+    <IncludePath>
+    </IncludePath>
+    <CompileDef>
+    </CompileDef>
+    <LinkFlags>
+    </LinkFlags>
+    <LinkPath>
+    </LinkPath>
+    <LinkAddLib>-lPocoFoundation -lPocoUtil</LinkAddLib>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+    <Name>SpcPocoConfigurationSample</Name>
+    <PackagePath>.\SpcPocoConfigurationSample.zip</PackagePath>
+    <PackageAppName>SpcPocoConfigurationSample</PackageAppName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>false</DebugSymbols>
+    <OutputPath>bin\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="SpcBaseCode.cpp">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="SpcBaseCode.h">
+      <SubType>Code</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="seeddata" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="seeddata\config.xml">
+      <SubType>Content</SubType>
+    </Content>
+    <None Include="config.xml">
+      <SubType>Content</SubType>
+    </None>
+    <Content Include="README.md">
+      <SubType>Content</SubType>
+    </Content>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

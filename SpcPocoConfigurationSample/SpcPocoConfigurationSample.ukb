@@ -1,0 +1,10 @@
+セッテイ	p=+20.00|セッテイ
+
+SpcPocoConfigurationSamplePalmiUKBEdit0400000404
+パルミー、セッテイ＊言って	パルミー、セッテイ＊教えて	パルミー、セッテイ＊○って	パルミー、セッテイ＊□って
+[セッテイですね。#NAME#]	/A=SapieContainer/ SpcPocoConfigurationSample
+
+キーワードによる聞き返し
+セッテイ
+[セッテイ？]ひょっとして|どなた・か|ぼくに|、セッテイ/をするよう、言いました？	/A=VoiceRecogApp/ ASKAGAIN_5 セッテイ パルミー、セッテイ＊言って /A=SapieContainer/ SpcPocoConfigurationSample
+
