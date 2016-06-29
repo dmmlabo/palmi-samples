@@ -76,6 +76,21 @@ void SpcPocoConfigurationSample::onInitialize()
 			messages.push_back(message);
 			i++;
 		}
+		ss.str("");
+		ss << i << "個のメッセージを読み込みました。";
+		speak(ss.str());
+#if _DEBUG
+		// ある要素の子供のキーの一覧をとることも出来ます。
+		// 子供をたどっていって解析していくようなこともできますが、
+		// そうしたことを行うのなら、設定ファイル向けのライブラリではなく、XML専用のライブラリを使うのが良いと思います。
+		typedef std::vector<std::string> Keys;
+		Keys keys;
+		settings->keys(keys);
+		speak("Key を一覧してみました。");
+		for (Keys::iterator itr = keys.begin(); itr != keys.end(); itr++) {
+			speak(*itr);
+		}
+#endif
 	}
 	catch (Poco::Exception& ex) {
 		SPC_LOG_ERROR(ex.displayText().c_str());

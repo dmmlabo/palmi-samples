@@ -4,10 +4,10 @@
     複数要素の値の取り方は、AbstractConfigration のインタフェースと形式に従います。
   </message>
   <message>
+    同じ名前の要素が複数ある場合は、
     配列の添え字的に取ります。
-    パルミーのバージョンの POCO では反復子には対応していません。
   </message>
-  <single>ただの値です。POCO の XML コンフィグレーションでは固定で config 要素をルート要素とします。</single>
+  <single>ただの値です。POCO の XML コンフィグレーションではルート要素名は無視されます。</single>
   <parent>
     <child>ネストしたサンプル値です。</child>
   </parent>

@@ -1,10 +1,10 @@
-セッテイ	p=+20.00|セッテイ
+ファイル	p=+10.00|ファイル
 
-SpcPocoConfigurationSamplePalmiUKBEdit0400000404
-パルミー、セッテイ＊言って	パルミー、セッテイ＊教えて	パルミー、セッテイ＊○って	パルミー、セッテイ＊□って
-[セッテイですね。#NAME#]	/A=SapieContainer/ SpcPocoConfigurationSample
+SpcPocoConfigurationSamplePalmiUKBEdit0400000603
+パルミー、ファイル＊読んで
+[ファイルですね。#NAME#]	/A=SapieContainer/ SpcPocoConfigurationSample
 
 キーワードによる聞き返し
-セッテイ
-[セッテイ？]ひょっとして|どなた・か|ぼくに|、セッテイ/をするよう、言いました？	/A=VoiceRecogApp/ ASKAGAIN_5 セッテイ パルミー、セッテイ＊言って /A=SapieContainer/ SpcPocoConfigurationSample
+ファイル
+[ファイル？]ひょっとして|どなた・か|ぼくに|、ファイル/をするよう、言いました？	/A=VoiceRecogApp/ ASKAGAIN_5 ファイル パルミー、ファイル＊読んで /A=SapieContainer/ SpcPocoConfigurationSample
 
