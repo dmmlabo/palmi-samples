@@ -1,5 +1,9 @@
 ﻿class spc_libcurl_sample : spc::SPCBase
 {
+private:
+	bool isApplyFilter();
+	bool isMatchRoute(std::string& resultRecord);
+	std::vector<std::string> m_specifiedRoutes;
 
 public:
 

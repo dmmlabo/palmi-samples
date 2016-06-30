@@ -11,22 +11,9 @@
   <section order="200" name="ApplicationConfig">
     <title></title>
     <description></description>
-    <configuration order="1" name="Area" display="yes" modify="yes" conftype="text" formtype="select" descript="no" bundlebottom="yes">
-      <title>対象地域</title>
-      <description></description>
-      <value>関東</value>
-      <choices>
-        <choice order="1" value="北海道">北海道</choice>
-        <choice order="2" value="東北">東北</choice>
-        <choice order="3" value="関東">関東</choice>
-        <choice order="4" value="中部">中部</choice>
-        <choice order="5" value="近畿">近畿</choice>
-        <choice order="6" value="九州">九州</choice>
-        <choice order="7" value="中国地方">中国地方</choice>
-        <choice order="8" value="四国">四国</choice>
-        <choice order="9" value="未分類">未分類</choice>
-        <choice order="10" value="">全て</choice>
-      </choices>
+    <configuration order="1" name="Route" display="yes" modify="yes" conftype="text" formtype="text" descript="yes" bundlebottom="yes">
+      <title>対象路線</title>
+      <description>半角カンマ「,」区切りで教える路線名を設定してください。</description>
     </configuration>
   </section>
 </palro_application>

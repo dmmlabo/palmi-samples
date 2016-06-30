@@ -10,8 +10,30 @@
 #include <curl/curl.h>
 #include "picojson.h"
 
+#include <Poco/StringTokenizer.h>
+
 using namespace std;
 using namespace spc;
+using namespace Poco;
+
+// かなり命名が怪しいですが、発話対象をフィルタすべき時に true を返します。
+bool spc_libcurl_sample::isApplyFilter() {
+	return m_specifiedRoutes.size() > 0;
+}
+
+// 指定したルートのキーワードのいずれかが含まれていたら true を返します。
+bool spc_libcurl_sample::isMatchRoute(std::string& resultRecord) {
+	if (!isApplyFilter()) {
+		return true;
+	}
+	//SPC_LOG_INFO(resultRecord.c_str());
+	for (vector<string>::iterator it = m_specifiedRoutes.begin(); it != m_specifiedRoutes.end(); it++) {
+		if (resultRecord.find(*it) != string::npos) {
+			return true;
+		}
+	}
+	return false;
+}
 
 // Palmi の SPC の基本は、起動したら Palmi が何かして、終了する、です。
 // なので、onInitialize() で何か処理して、終了してしまえばいいのです。
@@ -30,6 +52,21 @@ void spc_libcurl_sample::onInitialize()
 	// アプリケーションでネットワーク機能を使えるようにします。
 	callResult = enableNetwork();
 	SPC_LOG_INFO("enableNetwork: %d", callResult);
+
+	// ここでは Fwapper から行える設定から、路線設定を読み込みます。
+	// 詳しくはAPI仕様の loadConfig の項や、
+	// Palmi Application Development Ad-on Kit for Visual Studio ユーザーズガイドを参照ください。
+	string specifiedRoutes;
+	loadConfig("ApplicationConfig", "Route", specifiedRoutes);
+	SPC_LOG_INFO("specifiedRoutes: %s", specifiedRoutes.c_str());
+	// http://pocoproject.org/docs/Poco.StringTokenizer.html
+	StringTokenizer routes(specifiedRoutes, ",",
+		StringTokenizer::TOK_TRIM |
+		StringTokenizer::TOK_IGNORE_EMPTY);
+	copy(routes.begin(), routes.end(), back_inserter(m_specifiedRoutes));
+	if (isApplyFilter()) {
+		speak(specifiedRoutes + "の遅延ですね。");
+	}
 
 	try
 	{
@@ -60,8 +97,12 @@ void spc_libcurl_sample::onInitialize()
 			for (picojson::value::array::const_iterator it = resultList.begin(); it != resultList.end(); ++it) {
 				//{"name":"池袋線", "company" : "西武鉄道", "lastupdate_gmt" : 1456225502, "source" : "鉄道com RSS"},
 				picojson::value::object resultRecord = it->get<picojson::object>();
-				speak(resultRecord["company"].get<string>() + " の " + resultRecord["name"].get<string>());
-				count++;
+				// やや乱暴ですが、レコード全体に指定したワードのいずれかが含まれているかをチェックしています。
+				string resultRecordStr = picojson::value(resultRecord).serialize();
+				if (!isApplyFilter() || isMatchRoute(resultRecordStr)) {
+					speak(resultRecord["company"].get<string>() + " の " + resultRecord["name"].get<string>());
+					count++;
+				}
 			}
 			// GET結果を処理し終わった後には気の利いたことを発話させます。
 			// Palmiは気配りを忘れません。
@@ -69,7 +110,13 @@ void spc_libcurl_sample::onInitialize()
 				speak("遅延情報はありませんでした。");
 			}
 			else {
-				speak("が遅れているようです。大丈夫でしたか？");
+				speak("が遅れているようです。");
+				if (isApplyFilter()) {
+					speak("大丈夫ですか？");
+				}
+				else {
+					speak("大丈夫でしたか？");
+				}
 			}
 		}
 	}

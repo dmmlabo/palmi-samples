@@ -18,7 +18,7 @@
     <LinkFlags>-Wl,--no-as-needed -Wl,-rpath-link /usr/arm-linux-gnueabi/lib/arm-linux-gnueabi</LinkFlags>
     <LinkPath>
     </LinkPath>
-    <LinkAddLib>/usr/arm-linux-gnueabi/lib/arm-linux-gnueabi/libcurl.so.4.2.0</LinkAddLib>
+    <LinkAddLib>/usr/arm-linux-gnueabi/lib/arm-linux-gnueabi/libcurl.so.4.2.0 -lPocoFoundation</LinkAddLib>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
     <Name>SpcLibcurlSample</Name>
     <PackagePath>.\SpcLibcurlSample.zip</PackagePath>
@@ -80,6 +80,9 @@
       <SubType>Content</SubType>
     </Content>
     <Content Include="README.md">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SpcLibcurlSample.conf.xml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="tinycurl.h">
