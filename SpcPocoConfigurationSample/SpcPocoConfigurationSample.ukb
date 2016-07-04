@@ -1,0 +1,10 @@
+ファイル	p=+10.00|ファイル
+
+SpcPocoConfigurationSamplePalmiUKBEdit0400000603
+パルミー、ファイル＊読んで
+[ファイルですね。#NAME#]	/A=SapieContainer/ SpcPocoConfigurationSample
+
+キーワードによる聞き返し
+ファイル
+[ファイル？]ひょっとして|どなた・か|ぼくに|、ファイル/をするよう、言いました？	/A=VoiceRecogApp/ ASKAGAIN_5 ファイル パルミー、ファイル＊読んで /A=SapieContainer/ SpcPocoConfigurationSample
+
