@@ -3,6 +3,10 @@
 
 public:
 
+	std::string charToUtf8Hex(std::string& c);
+	void setCharToLed(std::string& c);
+	std::string utf8substr(std::string& originalString, int offset, int length);
+
 	/**
 	* @brief アプリケーション初期化イベント。
 	*

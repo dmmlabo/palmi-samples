@@ -1,0 +1,10 @@
+テキスト	テキスト
+
+SpcDisplayCharaSamplePalmiUKBEdit0400000E02
+パルミー、テキスト＊伝えて	パルミー、テキスト＊言って	パルミー、テキスト＊設定して	パルミー、テキスト＊□って	パルミー、テキスト＊○って
+[テキストですね。#NAME#]	/A=SapieContainer/ SpcDisplayCharaSample
+
+キーワードによる聞き返し
+テキスト
+[テキスト？]ひょっとして|どなた・か|ぼくに|、テキスト/をするよう、言いました？	/A=VoiceRecogApp/ ASKAGAIN_5 テキスト パルミー、テキスト＊伝えて /A=SapieContainer/ SpcDisplayCharaSample
+

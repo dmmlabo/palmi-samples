@@ -1,0 +1,13 @@
+﻿short ledDisplayData[Sapie::FACE_LED_HEIGHT][Sapie::FACE_LED_WIDTH] = {
+	{0,0,0,1,0,1,0,1,0,0,0,0},
+	{0,0,1,1,1,1,1,1,1,0,0,0},
+	{0,0,1,1,0,1,0,1,0,0,0,0},
+	{0,0,1,1,1,0,0,0,1,0,0,0},
+	{0,0,0,1,0,1,0,1,0,0,0,0},
+	{0,0,0,1,1,1,1,1,1,0,0,0},
+	{0,0,1,1,0,1,0,1,0,0,0,0}
+};
+Sapie::FaceLEDInfo ledDisplayInfo;
+ledDisplayInfo.lBright = Sapie::BRIGHT_NO_CHANGE;
+memcpy(ledDisplayInfo.sData, ledDisplayData, sizeof(ledDisplayData));
+ledDisplayInfo.lMode = Sapie::FACE_LED_MODE_NORMAL;

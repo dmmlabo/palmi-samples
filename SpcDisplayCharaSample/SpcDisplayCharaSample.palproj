@@ -19,8 +19,7 @@
     </LinkFlags>
     <LinkPath>
     </LinkPath>
-    <LinkAddLib>
-    </LinkAddLib>
+    <LinkAddLib>-lPocoFoundation</LinkAddLib>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
     <Name>SpcDisplayCharaSample</Name>
   </PropertyGroup>
@@ -41,6 +40,13 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="fonts" />
+    <Folder Include="fonts\k6x8\ascii" />
+    <Folder Include="fonts\k6x8\jis2byte" />
+    <Folder Include="fonts\misaki" />
+    <Folder Include="fonts\dynamic" />
+    <Folder Include="fonts\k6x8" />
+    <Folder Include="fonts\pattern" />
     <Folder Include="seeddata" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
