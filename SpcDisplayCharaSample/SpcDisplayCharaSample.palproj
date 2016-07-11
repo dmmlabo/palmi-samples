@@ -41,8 +41,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="fonts" />
-    <Folder Include="fonts\k6x8\ascii" />
-    <Folder Include="fonts\k6x8\jis2byte" />
     <Folder Include="fonts\misaki" />
     <Folder Include="fonts\dynamic" />
     <Folder Include="fonts\k6x8" />

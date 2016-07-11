@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{0199AD28-2342-40DA-9005-191241709AC5}") = "SpcLibcurlSample", "SpcLibcurlSample\SpcLibcurlSample.palproj", "{E7048B67-3F66-4384-BFE0-038236F51E26}"
 EndProject

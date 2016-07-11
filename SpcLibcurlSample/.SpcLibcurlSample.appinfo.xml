@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<application_info name="SpcLibcurlSample" display="true" add="false" delete="false">
+  <dir name="bin" display="true" add="false" delete="false">
+    <dir name="apl" display="true" add="false" delete="false">
+      <binary name="SpcLibcurlSample" display="true" add="false" delete="false" path=".\SpcLibcurlSample" />
+    </dir>
+  </dir>
+  <dir name="etc" display="true" add="false" delete="false">
+    <dir name="apl" display="true" add="false" delete="false">
+      <dir name="SpcLibcurlSample" display="true" add="true" delete="false">
+        <property name="SpcLibcurlSample.conf.xml" display="true" add="false" delete="false" path=".\SpcLibcurlSample.conf.xml" />
+        <trigger name="SpcLibcurlSample.ukb" display="true" add="false" delete="false" path=".\SpcLibcurlSample.ukb" />
+      </dir>
+    </dir>
+  </dir>
+</application_info>
