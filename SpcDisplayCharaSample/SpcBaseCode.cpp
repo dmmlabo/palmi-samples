@@ -20,8 +20,10 @@ using namespace spc;
 using namespace Poco;
 
 // http://vivi.dyndns.org/tech/cpp/binHex.html
+// ゼロパディングありの16進文字列化マクロです。
 #define  hexformat(fill, wd)    std::hex<<std::setfill(fill)<<std::setw(wd)
 
+// 文字列を16進数表現に変換します。
 std::string SpcDisplayCharaSample::charToUtf8Hex(std::string& c) {
 	stringstream ss;
 	ss << "x";
@@ -34,16 +36,19 @@ std::string SpcDisplayCharaSample::charToUtf8Hex(std::string& c) {
 	return ss.str();
 }
 
+// 指定した1文字をLEDに表示します。
 void SpcDisplayCharaSample::setCharToLed(std::string& c) {
 	SPC_LOG_INFO("setCharToLed = %s", c.c_str());
 	string dirPath;
 	getDataDirPath(dirPath);
+	// {UTF-8の16進表現}.led という規則でファイルを配置することで対応する文字のファイルパスを構築、表示しています。
 	string filePath = dirPath + "/fonts/misaki/" + charToUtf8Hex(c) + ".led";
 	long ledResult = startLED(filePath);
 	SPC_LOG_INFO("setCharToLed: startLED() = %d, filePath = %s", ledResult, filePath.c_str());
 }
 
 // http://blog.sarabande.jp/post/64271702938
+// UTF-8のsubstrです。
 std::string SpcDisplayCharaSample::utf8substr(std::string& originalString, int offset, int length)
 {
 	unsigned int pos;
@@ -82,6 +87,7 @@ std::string SpcDisplayCharaSample::utf8substr(std::string& originalString, int o
 void SpcDisplayCharaSample::onInitialize()
 {
 	try {
+		// LED表示のためのネタとしてハッシュを得ています。
 		Poco::DateTime dateTime;
 		std::string dateTimeString = Poco::DateTimeFormatter::format(dateTime, "%Y%m%d%H%M");
 		std::string dateTimeMessage = Poco::DateTimeFormatter::format(dateTime, "%Y年%m月%d日%H字%M分の数字部分をつないだ文字列のエムディー5ハッシュをお知らせします。");
@@ -95,10 +101,13 @@ void SpcDisplayCharaSample::onInitialize()
 
 		speak(dateTimeMessage);
 
+		// 全文字を処理します。
 		for (unsigned int i = 0; i < hash.length();) {
+			// (ソースコードがUTF-8なので)UTF-8としての1文字を得ています。
 			string c = utf8substr(hash, i, 1);
 			i += c.length();
 			SPC_LOG_INFO("i = %d, c = %s, c.length() = %d", i, c.c_str(), c.length());
+			// LEDに表示した後文字を発話します。
 			setCharToLed(c);
 			speak(string("<sapieVS_speed speed=\"70\">"
 				+ c
