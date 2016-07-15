@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<application_info name="SpeakTagSample" display="true" add="false" delete="false">
+  <dir name="bin" display="true" add="false" delete="false">
+    <dir name="apl" display="true" add="false" delete="false">
+      <binary name="SpeakTagSample" display="true" add="false" delete="false" path=".\SpeakTagSample" />
+    </dir>
+  </dir>
+  <dir name="etc" display="true" add="false" delete="false">
+    <dir name="apl" display="true" add="false" delete="false">
+      <dir name="SpeakTagSample" display="true" add="true" delete="false">
+        <property name="SpeakTagSample.conf.xml" display="true" add="false" delete="false" path=".\SpeakTagSample.conf.xml" />
+        <trigger name="SpeakTagSample.ukb" display="true" add="false" delete="false" path=".\SpeakTagSample.ukb" />
+      </dir>
+    </dir>
+  </dir>
+</application_info>

@@ -1,0 +1,10 @@
+フィーリングデモ	フィーリングデモ
+
+SpcFeelingSamplePalmiUKBEdit0400000002
+パルミー、フィーリングデモ＊やって	パルミー、フィーリングデモ＊して	パルミー、フィーリングデモ＊○って	パルミー、フィーリングデモ＊□って
+[フィーリングデモですね。#NAME#]	/A=SapieContainer/ SpcFeelingSample
+
+キーワードによる聞き返し
+フィーリングデモ
+[フィーリングデモ？]ひょっとして|どなた・か|ぼくに|、フィーリングデモ/をするよう、言いました？	/A=VoiceRecogApp/ ASKAGAIN_5 フィーリングデモ パルミー、フィーリングデモ＊やって /A=SapieContainer/ SpcFeelingSample
+

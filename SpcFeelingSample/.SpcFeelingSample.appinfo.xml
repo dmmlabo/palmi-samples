@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<application_info name="SpcFeelingSample" display="true" add="false" delete="false">
+  <dir name="bin" display="true" add="false" delete="false">
+    <dir name="apl" display="true" add="false" delete="false">
+      <binary name="SpcFeelingSample" display="true" add="false" delete="false" path=".\SpcFeelingSample" />
+    </dir>
+  </dir>
+  <dir name="etc" display="true" add="false" delete="false">
+    <dir name="apl" display="true" add="false" delete="false">
+      <dir name="SpcFeelingSample" display="true" add="true" delete="false">
+        <property name="SpcFeelingSample.conf.xml" display="true" add="false" delete="false" path=".\SpcFeelingSample.conf.xml" />
+        <trigger name="SpcFeelingSample.ukb" display="true" add="false" delete="false" path=".\SpcFeelingSample.ukb" />
+      </dir>
+    </dir>
+  </dir>
+</application_info>
