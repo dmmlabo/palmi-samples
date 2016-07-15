@@ -19,9 +19,11 @@
     </LinkFlags>
     <LinkPath>
     </LinkPath>
-    <LinkAddLib>-lPocoFoundation</LinkAddLib>
+    <LinkAddLib>-lPocoFoundation -lPocoCrypto</LinkAddLib>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
     <Name>SpcDisplayCharaSample</Name>
+    <PackagePath>.\SpcDisplayCharaSample.zip</PackagePath>
+    <PackageAppName>SpcDisplayCharaSample</PackageAppName>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
     <DebugSymbols>true</DebugSymbols>
@@ -42,9 +44,6 @@
   <ItemGroup>
     <Folder Include="fonts" />
     <Folder Include="fonts\misaki" />
-    <Folder Include="fonts\dynamic" />
-    <Folder Include="fonts\k6x8" />
-    <Folder Include="fonts\pattern" />
     <Folder Include="seeddata" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

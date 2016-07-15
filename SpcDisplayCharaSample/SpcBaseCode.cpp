@@ -10,6 +10,10 @@
 #include <iomanip>
 
 #include <Poco/File.h>
+#include <Poco/DateTime.h>
+#include <Poco/DateTimeFormatter.h>
+#include <Poco/Crypto/DigestEngine.h>
+#include <Poco/MD5Engine.h>
 
 using namespace std;
 using namespace spc;
@@ -42,14 +46,14 @@ void SpcDisplayCharaSample::setCharToLed(std::string& c) {
 // http://blog.sarabande.jp/post/64271702938
 std::string SpcDisplayCharaSample::utf8substr(std::string& originalString, int offset, int length)
 {
-	int pos;
+	unsigned int pos;
 	unsigned char lead;
 	int char_size;
 	int char_count = 0;
 
-	for (pos = offset; 
-			pos < originalString.size() && char_count < length; 
-			pos += char_size) {
+	for (pos = offset;
+		pos < originalString.size() && char_count < length;
+		pos += char_size) {
 		lead = originalString[pos];
 
 		if (lead < 0x80) {
@@ -78,20 +82,29 @@ std::string SpcDisplayCharaSample::utf8substr(std::string& originalString, int o
 void SpcDisplayCharaSample::onInitialize()
 {
 	try {
+		Poco::DateTime dateTime;
+		std::string dateTimeString = Poco::DateTimeFormatter::format(dateTime, "%Y%m%d%H%M");
+		std::string dateTimeMessage = Poco::DateTimeFormatter::format(dateTime, "%Y年%m月%d日%H字%M分の数字部分をつないだ文字列のエムディー5ハッシュをお知らせします。");
 
-		{
-			string userCode = "いろはにほへと。漢字感じ幹事、とてもラップ";
-			for (int i = 0; i < userCode.length();) {
-				string c = utf8substr(userCode, i, 1);
-				i += c.length();
-				SPC_LOG_INFO("i = %d, c = %s, c.length() = %d", i, c.c_str(), c.length());
-				setCharToLed(c);
-				speak(string("<sapieVS_speed speed=\"70\">"
-					+ c
-					+ "</sapieVS_speed>"
-					));
-				sleep(1);
-			}
+		Poco::MD5Engine engine;
+		engine.update(dateTimeString.c_str(), dateTimeString.size());
+		std::string hash = Poco::DigestEngine::digestToHex(engine.digest());
+
+		SPC_LOG_INFO(dateTimeString.c_str());
+		SPC_LOG_INFO(hash.c_str());
+
+		speak(dateTimeMessage);
+
+		for (unsigned int i = 0; i < hash.length();) {
+			string c = utf8substr(hash, i, 1);
+			i += c.length();
+			SPC_LOG_INFO("i = %d, c = %s, c.length() = %d", i, c.c_str(), c.length());
+			setCharToLed(c);
+			speak(string("<sapieVS_speed speed=\"70\">"
+				+ c
+				+ "</sapieVS_speed>"
+			));
+			sleep(1);
 		}
 	}
 	catch (...) {

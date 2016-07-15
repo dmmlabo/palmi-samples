@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<application_info name="SpcDisplayCharaSample" display="true" add="false" delete="false">
+  <dir name="bin" display="true" add="false" delete="false">
+    <dir name="apl" display="true" add="false" delete="false">
+      <binary name="SpcDisplayCharaSample" display="true" add="false" delete="false" path=".\SpcDisplayCharaSample" />
+    </dir>
+  </dir>
+  <dir name="etc" display="true" add="false" delete="false">
+    <dir name="apl" display="true" add="false" delete="false">
+      <dir name="SpcDisplayCharaSample" display="true" add="true" delete="false">
+        <property name="SpcDisplayCharaSample.conf.xml" display="true" add="false" delete="false" path=".\SpcDisplayCharaSample.conf.xml" />
+        <trigger name="SpcDisplayCharaSample.ukb" display="true" add="false" delete="false" path=".\SpcDisplayCharaSample.ukb" />
+        <dir name="fonts" display="true" add="true" delete="true" path=".\seeddata\fonts">
+          <dir name="misaki" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki">
+            <file name="x20.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x20.led" />
+            <file name="x21.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x21.led" />
+            <file name="x22.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x22.led" />
+            <file name="x23.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x23.led" />
+            <file name="x24.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x24.led" />
+            <file name="x25.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x25.led" />
+            <file name="x26.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x26.led" />
+            <file name="x27.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x27.led" />
+            <file name="x28.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x28.led" />
+            <file name="x29.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x29.led" />
+            <file name="x2a.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x2a.led" />
+            <file name="x2b.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x2b.led" />
+            <file name="x2c.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x2c.led" />
+            <file name="x2d.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x2d.led" />
+            <file name="x2e.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x2e.led" />
+            <file name="x2f.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x2f.led" />
+            <file name="x30.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x30.led" />
+            <file name="x31.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x31.led" />
+            <file name="x32.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x32.led" />
+            <file name="x33.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x33.led" />
+            <file name="x34.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x34.led" />
+            <file name="x35.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x35.led" />
+            <file name="x36.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x36.led" />
+            <file name="x37.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x37.led" />
+            <file name="x38.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x38.led" />
+            <file name="x39.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x39.led" />
+            <file name="x3a.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x3a.led" />
+            <file name="x3b.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x3b.led" />
+            <file name="x3c.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x3c.led" />
+            <file name="x3d.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x3d.led" />
+            <file name="x3e.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x3e.led" />
+            <file name="x3f.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x3f.led" />
+            <file name="x40.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x40.led" />
+            <file name="x41.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x41.led" />
+            <file name="x42.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x42.led" />
+            <file name="x43.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x43.led" />
+            <file name="x44.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x44.led" />
+            <file name="x45.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x45.led" />
+            <file name="x46.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x46.led" />
+            <file name="x47.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x47.led" />
+            <file name="x48.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x48.led" />
+            <file name="x49.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x49.led" />
+            <file name="x4a.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x4a.led" />
+            <file name="x4b.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x4b.led" />
+            <file name="x4c.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x4c.led" />
+            <file name="x4d.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x4d.led" />
+            <file name="x4e.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x4e.led" />
+            <file name="x4f.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x4f.led" />
+            <file name="x50.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x50.led" />
+            <file name="x51.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x51.led" />
+            <file name="x52.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x52.led" />
+            <file name="x53.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x53.led" />
+            <file name="x54.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x54.led" />
+            <file name="x55.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x55.led" />
+            <file name="x56.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x56.led" />
+            <file name="x57.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x57.led" />
+            <file name="x58.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x58.led" />
+            <file name="x59.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x59.led" />
+            <file name="x5a.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x5a.led" />
+            <file name="x5b.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x5b.led" />
+            <file name="x5c.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x5c.led" />
+            <file name="x5d.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x5d.led" />
+            <file name="x5e.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x5e.led" />
+            <file name="x5f.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x5f.led" />
+            <file name="x60.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x60.led" />
+            <file name="x61.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x61.led" />
+            <file name="x62.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x62.led" />
+            <file name="x63.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x63.led" />
+            <file name="x64.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x64.led" />
+            <file name="x65.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x65.led" />
+            <file name="x66.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x66.led" />
+            <file name="x67.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x67.led" />
+            <file name="x68.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x68.led" />
+            <file name="x69.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x69.led" />
+            <file name="x6a.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x6a.led" />
+            <file name="x6b.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x6b.led" />
+            <file name="x6c.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x6c.led" />
+            <file name="x6d.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x6d.led" />
+            <file name="x6e.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x6e.led" />
+            <file name="x6f.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x6f.led" />
+            <file name="x70.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x70.led" />
+            <file name="x71.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x71.led" />
+            <file name="x72.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x72.led" />
+            <file name="x73.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x73.led" />
+            <file name="x74.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x74.led" />
+            <file name="x75.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x75.led" />
+            <file name="x76.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x76.led" />
+            <file name="x77.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x77.led" />
+            <file name="x78.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x78.led" />
+            <file name="x79.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x79.led" />
+            <file name="x7a.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x7a.led" />
+            <file name="x7b.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x7b.led" />
+            <file name="x7c.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x7c.led" />
+            <file name="x7d.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x7d.led" />
+            <file name="x7e.led" display="true" add="true" delete="true" path=".\seeddata\fonts\misaki\x7e.led" />
+          </dir>
+        </dir>
+      </dir>
+    </dir>
+  </dir>
+</application_info>
