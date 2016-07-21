@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<palro_application name="SpcFeelingSample" version="1.0.0" releasedate="2016/05/20" type="SPC" mode="transient" appkind="application/other" language="ja" usedevice="">
+  <title>フィーリングデモ</title>
+  <titlespk>フィーリングデモ</titlespk>
+  <description>パルミーが持っている感情表現をデモします。&lt;br /&gt;パルミー、フィーリングデモして！</description>
+  <cond></cond>
+  <palrocond></palrocond>
+  <startupword></startupword>
+  <section order="100" name="ConditionTrigger" />
+  <section order="110" name="HabitTrigger" />
+</palro_application>

@@ -1,0 +1,10 @@
+ハツワテスト	ハツワテスト
+
+SpeakTagSamplePalmiUKBEdit0400000002
+パルミー、ハツワテスト＊やって	パルミー、ハツワテスト＊して	パルミー、ハツワテスト＊○って	パルミー、ハツワテスト＊□って
+[ハツワテストですね。#NAME#]	/A=SapieContainer/ SpeakTagSample
+
+キーワードによる聞き返し
+ハツワテスト
+[ハツワテスト？]ひょっとして|どなた・か|ぼくに|、ハツワテスト/をするよう、言いました？	/A=VoiceRecogApp/ ASKAGAIN_5 ハツワテスト パルミー、ハツワテスト＊やって /A=SapieContainer/ SpeakTagSample
+
