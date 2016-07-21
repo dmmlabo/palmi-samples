@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+VisualStudioVersion = 14.0.25123.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{0199AD28-2342-40DA-9005-191241709AC5}") = "SpcLibcurlSample", "SpcLibcurlSample\SpcLibcurlSample.palproj", "{E7048B67-3F66-4384-BFE0-038236F51E26}"
 EndProject
 Project("{0199AD28-2342-40DA-9005-191241709AC5}") = "SpcPocoConfigurationSample", "SpcPocoConfigurationSample\SpcPocoConfigurationSample.palproj", "{1F7D0908-26FC-4F26-AAD8-AE402030B181}"
+EndProject
+Project("{0199AD28-2342-40DA-9005-191241709AC5}") = "SpcDisplayCharaSample", "SpcDisplayCharaSample\SpcDisplayCharaSample.palproj", "{343875B8-3AC7-4310-8B5D-AE2814CF1273}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{1F7D0908-26FC-4F26-AAD8-AE402030B181}.Debug|x86.Build.0 = Debug|x86
 		{1F7D0908-26FC-4F26-AAD8-AE402030B181}.Release|x86.ActiveCfg = Release|x86
 		{1F7D0908-26FC-4F26-AAD8-AE402030B181}.Release|x86.Build.0 = Release|x86
+		{343875B8-3AC7-4310-8B5D-AE2814CF1273}.Debug|x86.ActiveCfg = Debug|x86
+		{343875B8-3AC7-4310-8B5D-AE2814CF1273}.Debug|x86.Build.0 = Debug|x86
+		{343875B8-3AC7-4310-8B5D-AE2814CF1273}.Release|x86.ActiveCfg = Release|x86
+		{343875B8-3AC7-4310-8B5D-AE2814CF1273}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

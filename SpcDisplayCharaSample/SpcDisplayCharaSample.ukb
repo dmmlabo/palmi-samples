@@ -1,0 +1,10 @@
+モジレツ	モジレツ
+
+SpcDisplayCharaSamplePalmiUKBEdit0400000E02
+パルミー、モジレツ＊伝えて	パルミー、モジレツ＊言って	パルミー、モジレツ＊設定して	パルミー、モジレツ＊□って	パルミー、モジレツ＊○って
+[モジレツですね。#NAME#]	/A=SapieContainer/ SpcDisplayCharaSample
+
+キーワードによる聞き返し
+モジレツ
+[モジレツ？]ひょっとして|どなた・か|ぼくに|、モジレツ/をするよう、言いました？	/A=VoiceRecogApp/ ASKAGAIN_5 モジレツ パルミー、モジレツ＊伝えて /A=SapieContainer/ SpcDisplayCharaSample
+

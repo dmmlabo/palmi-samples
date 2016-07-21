@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<application_info name="SpcPocoConfigurationSample" display="true" add="false" delete="false">
+  <dir name="bin" display="true" add="false" delete="false">
+    <dir name="apl" display="true" add="false" delete="false">
+      <binary name="SpcPocoConfigurationSample" display="true" add="false" delete="false" path=".\SpcPocoConfigurationSample" />
+    </dir>
+  </dir>
+  <dir name="etc" display="true" add="false" delete="false">
+    <dir name="apl" display="true" add="false" delete="false">
+      <dir name="SpcPocoConfigurationSample" display="true" add="true" delete="false">
+        <property name="SpcPocoConfigurationSample.conf.xml" display="true" add="false" delete="false" path=".\SpcPocoConfigurationSample.conf.xml" />
+        <trigger name="SpcPocoConfigurationSample.ukb" display="true" add="false" delete="false" path=".\SpcPocoConfigurationSample.ukb" />
+        <file name="config.xml" display="true" add="true" delete="true" path=".\seeddata\config.xml" />
+      </dir>
+    </dir>
+  </dir>
+</application_info>
